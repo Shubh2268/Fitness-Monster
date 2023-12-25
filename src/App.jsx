@@ -1,23 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css'
-import Navbar from './pages/Navbar';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Exercises from './pages/Exercises';
+import ExerciseCard from './components/ExerciseCard';
 
 function App() {
   return (
-    <div className='p-5'>
+    <div className=''>
       <Navbar />
-      {/* <BrowserRouter> */}
-        {/* <Routes> */}
-          {/* <Route path='/' element={<Home />} /> */}
-          <Home />
-          {/* <Route path='/exercise' element={<Exercises />} /> */}
-          <Exercises />
-        {/* </Routes> */}
-      {/* </BrowserRouter> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {/* <Route path='/exercise/:id' element={<Exercises />} /> */}
+      </Routes>
+        <Exercises />
+        <ExerciseCard/>
     </div>
   )
 }

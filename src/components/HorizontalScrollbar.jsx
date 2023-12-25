@@ -12,52 +12,52 @@ const HorizontalScrollbar = () => {
         {
             id: 2,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Back'
         },
         {
             id: 3,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Cardio'
         },
         {
             id: 4,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Chest'
         },
         {
             id: 5,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Shoulder'
         },
         {
             id: 6,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Lower Arms'
         },
         {
             id: 7,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Lower Legs'
         },
         {
             id: 8,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Neck'
         },
         {
             id: 9,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Upper Arms'
         },
         {
             id: 10,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Upper Legs'
         },
         {
             id: 11,
             img: 'https://jsm-gym.netlify.app/static/media/gym.6e701417c428e2fbc267.png',
-            title: 'All'
+            title: 'Waist'
         }
     ]
 
@@ -76,8 +76,10 @@ const HorizontalScrollbar = () => {
             <FaChevronLeft onClick={slideLeft} size={20} className='cursor-pointer opacity-50 hover:opacity-100' />
             <div id="slider" className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                 {data.map((item) => (
-                    <img key={item.id} src={item.img} alt="category" className='w-60 bg-slate-900 m-6 inline-block py-16 px-20 cursor-pointer hover:scale-110 ease-in duration-300' />
-                    
+                    <div className='bg-slate-800 w-60 m-6 inline-block py-14 px-24 cursor-pointer hover:scale-110 ease-in duration-300 rounded-md'>
+                        <img key={item.id} src={item.img} alt="category" className='w-20 ' />
+                        <h4 className='text-center text-white mt-8 text-xl font-semibold flex items-center justify-center tracking-wide'>{item.title}</h4>
+                    </div>
                 ))}
             </div>
             <FaChevronRight onClick={slideRight} size={20} className='cursor-pointer opacity-50 hover:opacity-100' />
