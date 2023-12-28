@@ -4,8 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Exercises from './pages/Exercises';
-import ExerciseCard from './components/ExerciseCard';
+import ExerciseDetail from './pages/ExerciseDetail';
 
 function App() {
   return (
@@ -13,10 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/exercise/:id' element={<Exercises />} /> */}
+        <Route path='/exercise/:id' element={<ExerciseDetail />} />
       </Routes>
-        <Exercises />
-        <ExerciseCard/>
     </div>
   )
 }
