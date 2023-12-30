@@ -9,4 +9,8 @@
     html {
         font-family: 'Ubuntu', sans-serif;
     }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
 }
