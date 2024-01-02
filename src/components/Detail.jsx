@@ -1,26 +1,42 @@
 import React from 'react';
+import bodypartImage from '../assets/bodypart.png'
+import targetImage from '../assets/target.png'
+import equipmentImage from '../assets/equipment.png'
 
 const Detail = ({ exerciseDetail }) => {
 
-    const { bodyPart, gifUrl, name, target, equipment, instructions } = exerciseDetail;
+    const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
+
+    const extraDetail = [
+        {
+            icon: bodypartImage,
+            name: bodyPart,
+        },
+        {
+            icon: targetImage,
+            name: target,
+        },
+        {
+            icon: equipmentImage,
+            name: equipment,
+        },
+    ];
 
     return (
-
-        
-        
-        <div className='flex items-center px-5 bg-slate-900 text-white'>
-            <img src={gifUrl} alt={name} className='w-[300px] md:w-[730px] h-[300px] md:h-[740px]' />
-            <div className='p-10'>
-                <h3 className='text-3xl md:text-6xl font-bold capitalize'>{name}</h3>
-                <p className='py-5 text-xl text-slate-200 italic'>Exercises keep you strong.{' '} <span className='capitalize text-red-600 font-medium'>{name}</span> bup is one
-                    of the best <br /> exercises to target your <span className='capitalize text-red-600 font-medium'>{target}</span>. It will help you improve your{' '}
+        <div className='flex flex-col md:flex items-cente text-slate-900'>
+            <img src={gifUrl} alt={name} className='w-[300px] md:w-[730px] h-[300px] md:h-[740px] mt-24' />
+            <div className='px-10 py-24'>
+                <h3 className='text-3xl md:text-6xl font-bold capitalize mt-14'>{name}</h3>
+                <p className='py-5 text-xl text-slate-800 italic'>Exercises keep you strong.{' '} <span className='capitalize text-red-600 font-medium'>{name}</span> bup is one
+                    of the best <br /> exercise to target your <span className='capitalize text-red-600 font-medium'>{target}</span>. It will help you improve your{' '}
                     <br /> mood and gain energy.
                 </p>
-                <ol>
-                    {exerciseDetail.instructions.map((items) => (
-                        <li key={items.id}>{items}</li>
-                    ))}
-                </ol>
+                {extraDetail.map((item) => (
+                    <div key={item.name} className='flex items-center my-6 mx-1'>
+                        <img src={item.icon} alt={bodyPart} className='w-16 bg-slate-300 p-3 rounded-full mx-3 my-2' />
+                        <p className='text-xl text-slate-800 capitalize m-2 font-medium'>{item.name}</p>
+                    </div>
+                ))}
             </div>
         </div>
     )

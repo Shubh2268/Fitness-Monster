@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import HorizontalScrollbar from './HorizontalScrollbar';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 
-const SearchExercises = ({ setExercises, bodypart, setBodyPart }) => {
+const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
     const [search, setSearch] = useState('');
-    const [bodyparts, setBodyParts] = useState([]);
+    const [bodyParts, setBodyParts] = useState([]);
 
     useEffect(() => {
         const fetchExercisesData = async () => {
@@ -45,7 +45,7 @@ const SearchExercises = ({ setExercises, bodypart, setBodyPart }) => {
                 <button className='px-7 py-3 border-none -ml-4 bg-red-600 hover:bg-red-500 text-white text-lg font-bold rounded-md italic tracking-wide' onClick={handleSearch}>Search</button>
             </div>
             <div>
-                <HorizontalScrollbar />
+                <HorizontalScrollbar data={bodyParts} bodyParts bodyPart={bodyPart} setBodyPart={setBodyPart} />
             </div>
         </div>
     )

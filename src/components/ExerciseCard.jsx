@@ -9,7 +9,7 @@ const ExerciseCard = ({ exercise }) => {
                 <button className='ml-5 px-4 py-2 bg-slate-600 text-white text-base rounded-3xl capitalize'>{exercise.bodyPart}</button>
                 <button className='ml-5 px-4 py-2 bg-red-500 text-white text-base rounded-3xl capitalize'>{exercise.target}</button>
             </div>
-            <h4 className='ml-2 text-2xl p-4 font-semibold tracking-wide capitalize'>{exercise.name}</h4>
+            <h4 className='ml-2 text-2xl text-wrap p-4 font-semibold tracking-wide capitalize'>{exercise.name}</h4>
         </Link>
     )
 }
