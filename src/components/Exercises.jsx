@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
+// import { Pagination } from '@mui/material';
 
 import ExerciseCard from '../components/ExerciseCard';
 import Loader from '../components/Loader';
@@ -31,7 +31,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
 
-  const paginate = (event, value) => {
+  const paginate = (e,value) => {
     setCurrentPage(value);
 
     window.scrollTo({ top: 100, behavior: 'smooth' });
@@ -42,9 +42,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   }
 
   return (
-    <div id='exercises' className='my-5'>
-      <div className='flex items-center justify-center'>
-        <h1 className='font-bold text-4xl capitalize mt-10 mb-3'>showing results</h1>
+    <div id='exercises' className='my-24'>
+      <div className='flex items-center justify-center my-14'>
+        <h1 className='font-bold text-4xl capitalize'>showing results</h1>
       </div>
       <div className='my-5'>
         <div className='flex flex-wrap items-center justify-center'>
@@ -53,17 +53,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           ))}
         </div>
         <div className='flex items-center justify-center'>
-          {exercises.length > 9 && (
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel="next >"
-              onPageChange={paginate}
-              pageRangeDisplayed={10}
-              pageCount={Math.ceil(exercises.length / exercisesPerPage)}
-              previousLabel="< previous"
-              renderOnZeroPageCount={null}
-            />
-          )}
+          {/* {exercises.length > 9 && (
+            // <Pagination count={10} />
+          )} */}
         </div>
       </div>
     </div>
