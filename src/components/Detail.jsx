@@ -23,7 +23,7 @@ const Detail = ({ exerciseDetail }) => {
     ];
 
     return (
-        <div className='flex flex-col md:flex items-cente text-slate-900'>
+        <div className='flex items-center text-slate-900'>
             <img src={gifUrl} alt={name} className='w-[300px] md:w-[730px] h-[300px] md:h-[740px] mt-24' />
             <div className='px-10 py-24'>
                 <h3 className='text-3xl md:text-6xl font-bold capitalize mt-14'>{name}</h3>

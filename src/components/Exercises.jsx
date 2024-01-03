@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactPaginate from 'react-paginate';
 
 import ExerciseCard from '../components/ExerciseCard';
 import Loader from '../components/Loader';
@@ -25,24 +26,44 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     fetchExercisesData();
   }, [bodyPart]);
 
+  // Pagination 
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+
+  const paginate = (event, value) => {
+    setCurrentPage(value);
+
+    window.scrollTo({ top: 100, behavior: 'smooth' });
+  };
 
   if (!currentExercises.length) {
     return <Loader />
   }
 
   return (
-    <div name='exercises' className='my-5'>
+    <div id='exercises' className='my-5'>
       <div className='flex items-center justify-center'>
         <h1 className='font-bold text-4xl capitalize mt-10 mb-3'>showing results</h1>
       </div>
-      <div className='my-7'>
+      <div className='my-5'>
         <div className='flex flex-wrap items-center justify-center'>
           {currentExercises.map((exercise, id) => (
             <ExerciseCard key={id} exercise={exercise} />
           ))}
+        </div>
+        <div className='flex items-center justify-center'>
+          {exercises.length > 9 && (
+            <ReactPaginate
+              breakLabel="..."
+              nextLabel="next >"
+              onPageChange={paginate}
+              pageRangeDisplayed={10}
+              pageCount={Math.ceil(exercises.length / exercisesPerPage)}
+              previousLabel="< previous"
+              renderOnZeroPageCount={null}
+            />
+          )}
         </div>
       </div>
     </div>
