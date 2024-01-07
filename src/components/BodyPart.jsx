@@ -1,5 +1,4 @@
 import React from 'react';
-import fig from '../assets/logo.webp';
 
 const BodyPart = ({ item, bodyPart, setBodyPart }) => {
 
@@ -68,9 +67,9 @@ const BodyPart = ({ item, bodyPart, setBodyPart }) => {
                     setBodyPart(item);
                     window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
                 }}>
-                <div className='bg-slate-900 m-4 hover:scale-105 ease-in duration-500 rounded-md'>
-                    <img src="https://imagetolink.com/ib/vR59a6gaJR.jpg" alt="category" className='w-72 h-52 rounded-t-md' />
-                    <h4 className='flex items-center justify-center text-white p-4 text-xl font-semibold tracking-wide capitalize'>{item}</h4>
+                <div className='bg-slate-900 m-2 md:m-4 hover:scale-105 ease-in duration-500 rounded-md'>
+                    <img src="https://imagetolink.com/ib/vR59a6gaJR.jpg" alt="category" className='w-40 h-28 md:w-72 md:h-52 rounded-t-md' />
+                    <h4 className='flex items-center justify-center text-white p-2 md:p-4 text-sm md:text-xl font-medium md:font-semibold tracking-wide capitalize'>{item}</h4>
                 </div>
             </button>
         </div>

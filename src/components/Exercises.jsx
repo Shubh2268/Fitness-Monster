@@ -43,17 +43,17 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   }
 
   return (
-    <div id='exercises' className='my-24'>
+    <div id='exercises' className='my-16 md:my-24'>
       <div className='flex items-center justify-center my-5'>
-        <h1 className='font-bold text-4xl capitalize'>showing results</h1>
+        <h1 className='font-bold text-2xl md:text-4xl capitalize'>showing results</h1>
       </div>
-      <div className='my-5'>
+      <div className='my-1'>
         <div className='flex flex-wrap items-center justify-center'>
           {currentExercises.map((exercise, id) => (
             <ExerciseCard key={id} exercise={exercise} />
           ))}
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center mt-20 md:mt-0'>
           {exercises.length > 6 && (
             <ReactPaginate
             breakLabel={
