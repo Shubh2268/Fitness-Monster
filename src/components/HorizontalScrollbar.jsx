@@ -17,10 +17,10 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
 
     return (
         <div className='relative flex items-center my-10'>
-            <FaChevronLeft onClick={slideLeft} size='30px' className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
-            <div id="slider" className=' overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+            <FaChevronLeft onClick={slideLeft} size={25} className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
+            <div id="slider" className='overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                 {data.map((item) => (
-                    <div key={item.id || item} title={item.id || item} className='inline-block my-0 md:my-5'>
+                    <div key={item.id || item} title={item.id || item} className='inline-block my-0 lg:my-5'>
                         {bodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} />}
                     </div>
                 ))}

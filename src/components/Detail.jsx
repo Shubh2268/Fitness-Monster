@@ -26,9 +26,11 @@ const Detail = ({ exerciseDetail }) => {
     ];
 
     return (
-        <div className='flex items-center text-slate-900'>
-            <img src={gifUrl} alt={name} className='w-[300px] md:w-[730px] h-[300px] md:h-[740px]' />
-            <div className='px-10 py-24'>
+        <div className='flex items-center text-slate-900 mt-5 justify-center'>
+            
+            <img src={gifUrl} alt={name} className='w-full px-5 md:w-[730px] h-full md:h-[740px]' />
+
+            <div className='px-10 lg:py-24'>
                 <h3 className='text-3xl md:text-6xl font-bold capitalize mt-14'>{name}</h3>
                 <p className='py-5 text-xl text-slate-800 italic'>Exercises keep you strong.{' '} <span className='capitalize text-red-600 font-medium'>{name}</span> bup is one
                     of the best <br /> exercise to target your <span className='capitalize text-red-600 font-medium'>{target}</span>. It will help you improve your{' '}
