@@ -53,12 +53,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           ))}
         </div>
         <div className='flex items-center justify-center mt-20 md:mt-0'>
-          {exercises.length > 9 && (
+          {exercises && (
             <Pagination
             color="standard"
             shape="circular"
             defaultPage={1}
-            count={20}
+            count={Math.ceil(exercises.length / exercisesPerPage)}
             page={currentPage}
             onChange={paginate}
             size="small"

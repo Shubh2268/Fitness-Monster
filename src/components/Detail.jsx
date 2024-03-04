@@ -26,7 +26,7 @@ const Detail = ({ exerciseDetail }) => {
     ];
 
     return (
-        <div className='flex items-center text-slate-900 mt-5 justify-center'>
+        <div className='grid md:grid-cols-2 text-slate-900 mt-5'>
             
             <img src={gifUrl} alt={name} className='w-full px-5 md:w-[730px] h-full md:h-[740px]' />
 

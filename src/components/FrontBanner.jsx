@@ -3,8 +3,8 @@ import banner from '../assets/banner.png';
 
 const Home = () => {
   return (
-    <div className='flex items-center px-10 py-10 md:pt-0 md:pb-5 bg-slate-900'>
-      <div className='w-full md:w-1/2 ml-5 md:mt-16'>
+    <div className='flex items-center px-10 md:px-20 py-10 md:pt-0 md:pb-5 bg-slate-900'>
+      <div className='w-full md:w-1/2 md:mt-16'>
         <h1 className='text-2xl md:px-4 text-center md:text-start md:text-4xl lg:text-5xl xl:text-7xl bg-gradient-to-r from-slate-300 to-red-500 bg-clip-text text-transparent tracking-tight font-bold uppercase'>empower your body, <p>energize your mind</p></h1>
         <p className='text-center sm:text-start text-slate-300 text-xs sm:text-sm xl:text-lg p-5 font-medium italic capitalize'>fuel your fitness revolution with fitness monster.</p>
         <div className='flex items-center justify-center md:justify-start'>
