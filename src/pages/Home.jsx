@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import FrontBanner from '../components/FrontBanner';
+import Header from '../components/Header';
 import SearchExercises from '../components/SearchExercises';
 import Exercises from '../components/Exercises';
+
 
 const Home = () => {
 
@@ -10,7 +11,7 @@ const Home = () => {
 
   return (
     <div name='home'>
-      <FrontBanner />
+      <Header />
       <SearchExercises setExercises={setExercises} bodypart={bodypart} setBodyPart={setBodyPart} />
       <Exercises exercises={exercises} setExercises={setExercises} bodyPart={bodypart} />
     </div>

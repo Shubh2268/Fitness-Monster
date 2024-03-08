@@ -1,7 +1,7 @@
 import React from 'react';
 import banner from '../assets/banner.png';
 
-const Home = () => {
+const Header = () => {
   return (
     <div className='flex items-center px-10 md:px-20 py-10 md:pt-0 md:pb-5 bg-slate-900'>
       <div className='w-full md:w-1/2 md:mt-16'>
@@ -18,4 +18,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Header;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BodyPart = ({ item, bodyPart, setBodyPart }) => {
+const BodyPart = ({ item, setBodyPart }) => {
 
     return (
         <div className='flex items-center justify-center'>
