@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import ExerciseCard from './ExerciseCard';
 import BodyPart from './BodyPart';
 
@@ -17,7 +17,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
 
     return (
         <div className='relative flex items-center my-10'>
-            <FaChevronLeft onClick={slideLeft} size={25} className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
+            <FaChevronLeft onClick={slideLeft} size={15} className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
             <div id="slider" className='overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                 {data.map((item) => (
                     <div key={item.id || item} title={item.id || item} className='inline-block my-0 lg:my-5'>
@@ -25,7 +25,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
                     </div>
                 ))}
             </div>
-            <FaChevronRight onClick={slideRight} size='30px' className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
+            <FaChevronRight onClick={slideRight} size={15} className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
         </div>
     )
 }
