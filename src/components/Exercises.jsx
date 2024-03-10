@@ -52,7 +52,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             <ExerciseCard key={id} exercise={exercise} />
           ))}
         </div>
-        <div className='flex items-center justify-center mt-20 md:mt-0'>
+        <div className='flex items-center justify-center mt-10 md:mt-0'>
           {exercises && (
             <Pagination
             color="standard"
