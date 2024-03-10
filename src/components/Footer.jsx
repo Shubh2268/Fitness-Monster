@@ -7,7 +7,7 @@ const Footer = () => (
       <img src={logo} alt='logo' className='w-8 md:w-10 rounded-full' />
       <h2 className='text-xl md:text-2xl font-bold p-2 italic'>Fitness Monster</h2>
     </div>
-    <p className='text-base md:text-xl p-2 font-medium italic text-center'>Designed and Developed by <span className='uppercase bg-gradient-to-r from-red-600 to-slate-200 bg-clip-text text-transparent font-semibold'>shubham tiwari</span></p>
+    <p className='text-base md:text-xl p-2 font-medium italic text-center w-2/3 md:w-full'>Designed and Developed by <span className='uppercase bg-gradient-to-r from-red-600 to-slate-200 bg-clip-text text-transparent font-semibold'>shubham tiwari</span></p>
   </div>
 );
 
