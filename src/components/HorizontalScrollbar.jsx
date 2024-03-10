@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5';
 import ExerciseCard from './ExerciseCard';
 import BodyPart from './BodyPart';
 
@@ -17,7 +17,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
 
     return (
         <div className='my-10'>
-            <div id="slider" className='overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+            <div id='slider' className='overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                 {data.map((item) => (
                     <div key={item.id || item} title={item.id || item} className='inline-block my-0 lg:my-5'>
                         {bodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} />}
