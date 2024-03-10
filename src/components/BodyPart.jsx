@@ -9,7 +9,7 @@ const BodyPart = ({ item, setBodyPart }) => {
                     setBodyPart(item);
                     window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
                 }}>
-                <div className='bg-slate-900 m-2 w-32 md:w-44 hover:scale-105 ease-in duration-500 rounded-xl'>
+                <div className='bg-slate-900 border-2 border-red-600 m-2 w-32 md:w-44 hover:scale-105 ease-in duration-500 rounded-xl'>
                     <h4 className='flex items-center justify-center text-white p-2 md:p-3 text-sm md:text-lg tracking-wide capitalize'>{item}</h4>
                 </div>
             </button>
