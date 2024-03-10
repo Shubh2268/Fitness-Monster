@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Pagination } from '@mui/material';
+import ReactPaginate from 'react-paginate';
 
 import ExerciseCard from '../components/ExerciseCard';
 import Loader from '../components/Loader';
@@ -54,15 +54,15 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         </div>
         <div className='flex items-center justify-center mt-10 md:mt-0'>
           {exercises && (
-            <Pagination
-            color="standard"
-            shape="circular"
-            defaultPage={1}
-            count={Math.ceil(exercises.length / exercisesPerPage)}
-            page={currentPage}
-            onChange={paginate}
-            size="small"
-          />
+            <ReactPaginate
+              breakLabel="..."
+              nextLabel="next >"
+              onPageChange={paginate}
+              pageRangeDisplayed={5}
+              pageCount={pageCount}
+              previousLabel="< previous"
+              renderOnZeroPageCount={null}
+            />
           )}
         </div>
       </div>
