@@ -53,7 +53,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           ))}
         </div>
         <div className='flex items-center justify-center mt-10 md:mt-0'>
-          {exercises && (
+          {/* {exercises && (
             <ReactPaginate
               breakLabel="..."
               nextLabel="next >"
@@ -63,7 +63,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
               previousLabel="< previous"
               renderOnZeroPageCount={null}
             />
-          )}
+          )} */}
         </div>
       </div>
     </div>
