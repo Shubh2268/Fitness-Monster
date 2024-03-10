@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 import ExerciseCard from './ExerciseCard';
 import BodyPart from './BodyPart';
 
@@ -16,8 +16,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
     }
 
     return (
-        <div className='relative flex items-center my-10'>
-            <FaChevronLeft onClick={slideLeft} size={15} className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
+        <div className='my-10'>
             <div id="slider" className='overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                 {data.map((item) => (
                     <div key={item.id || item} title={item.id || item} className='inline-block my-0 lg:my-5'>
@@ -25,7 +24,11 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, bodyParts }) => {
                     </div>
                 ))}
             </div>
-            <FaChevronRight onClick={slideRight} size={15} className='cursor-pointer opacity-100 hover:opacity-50 mx-2' />
+            <div className='flex justify-end mx-6'>
+                <IoArrowBackCircleOutline onClick={slideLeft} size={30} className='cursor-pointer opacity-100 hover:opacity-70 mx-1 text-red-600' />
+                <IoArrowForwardCircleOutline onClick={slideRight} size={30} className='cursor-pointer opacity-100 hover:opacity-70 mx-1 text-red-600' />
+            </div>
+
         </div>
     )
 }
