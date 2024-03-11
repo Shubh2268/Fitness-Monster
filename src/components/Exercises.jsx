@@ -59,11 +59,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           {exercises && (
             <ReactPaginate className='flex items-center justify-center'
               breakLabel="..."
-              nextLabel= {<IoCaretForwardCircleOutline size={25} className='text-gray-700' />}
+              nextLabel= {<IoCaretForwardCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               onPageChange={handlePageClick}
               pageRangeDisplayed={5}
               pageCount={pageCount}
-              previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-700' />}
+              previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               renderOnZeroPageCount={null}
               pageClassName='text-sm font-medium py-2 px-4 mx-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 cursor-pointer'
             />
