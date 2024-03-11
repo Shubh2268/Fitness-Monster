@@ -63,9 +63,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             <ExerciseCard key={id} exercise={exercise} />
           ))}
         </div>
-        <div className='flex exercises-center justify-center mt-10 md:mt-0'>
+        <div className='flex items-center justify-center mt-10 md:mt-0'>
           {exercises && (
-            <ReactPaginate
+            <ReactPaginate className='flex items-center justify-center'
               breakLabel="..."
               nextLabel=">"
               onPageChange={handlePageClick}
@@ -73,6 +73,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
               pageCount={pageCount}
               previousLabel="<"
               renderOnZeroPageCount={null}
+              pageClassName='text-sm font-medium py-2 px-4 mx-1 bg-gray-200 text-gray-700 rounded-full'
             />
           )}
         </div>
