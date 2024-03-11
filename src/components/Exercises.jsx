@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import { IoCaretBackCircleOutline, IoCaretForwardCircleOutline } from "react-icons/io5";
 
 import ExerciseCard from '../components/ExerciseCard';
 import Loader from '../components/Loader';
@@ -28,23 +29,14 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   }, [bodyPart]);
 
   // // Pagination 
-  // const indexOfLastExercise = currentPage * exercisesPerPage;
-  // const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  // const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
-
   const endOffset = itemOffset + exercisesPerPage;
   const currentExercises = exercises.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(exercises.length / exercisesPerPage);
 
-  // const paginate = (value) => {
-  //   setCurrentPage(value);
-
-  //   window.scrollTo({ top: 100, behavior: 'smooth' });
-  // };
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * exercisesPerPage) % exercises.length;
-    
+
     setItemOffset(newOffset);
   };
 
@@ -67,13 +59,13 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           {exercises && (
             <ReactPaginate className='flex items-center justify-center'
               breakLabel="..."
-              nextLabel=">"
+              nextLabel= {<IoCaretForwardCircleOutline size={25} className='text-gray-700' />}
               onPageChange={handlePageClick}
               pageRangeDisplayed={5}
               pageCount={pageCount}
-              previousLabel="<"
+              previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-700' />}
               renderOnZeroPageCount={null}
-              pageClassName='text-sm font-medium py-2 px-4 mx-1 bg-gray-200 text-gray-700 rounded-full'
+              pageClassName='text-sm font-medium py-2 px-4 mx-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 cursor-pointer'
             />
           )}
         </div>
