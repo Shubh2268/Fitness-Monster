@@ -8,7 +8,6 @@ import { exerciseOptions, fetchData } from '../utils/fetchData';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
-  // const [currentPage, setCurrentPage] = useState(1);
   const [itemOffset, setItemOffset] = useState(0);
   const [exercisesPerPage] = useState(6);
 
@@ -28,7 +27,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     fetchExercisesData();
   }, [bodyPart]);
 
-  // // Pagination 
+  // Pagination 
   const endOffset = itemOffset + exercisesPerPage;
   const currentExercises = exercises.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(exercises.length / exercisesPerPage);
@@ -61,11 +60,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
               breakLabel="..."
               nextLabel= {<IoCaretForwardCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               onPageChange={handlePageClick}
-              pageRangeDisplayed={1}
+              pageRangeDisplayed={3}
               pageCount={pageCount}
               previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               renderOnZeroPageCount={null}
-              pageClassName='text-xs md:text-sm font-medium py-1 md:py-2 px-2 md:px-4 mx-1 bg-gray-200 text-gray-700  rounded-md hover:bg-gray-300 cursor-pointer'
+              pageClassName='text-xs md:text-sm font-medium py-1 md:py-2 px-2 md:px-4 mx-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 cursor-pointer'
               activeClassName='bg-red-200 hover:bg-red-300'
             />
           )}
