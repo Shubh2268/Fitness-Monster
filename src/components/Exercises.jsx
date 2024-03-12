@@ -60,7 +60,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
               breakLabel="..."
               nextLabel= {<IoCaretForwardCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               onPageChange={handlePageClick}
-              pageRangeDisplayed={3}
+              pageRangeDisplayed={1}
               pageCount={pageCount}
               previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               renderOnZeroPageCount={null}
