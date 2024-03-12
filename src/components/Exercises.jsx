@@ -55,17 +55,18 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             <ExerciseCard key={id} exercise={exercise} />
           ))}
         </div>
-        <div className='flex items-center justify-center mt-10 md:mt-0'>
+        <div className='flex items-center justify-center mt-10 md:mt-5'>
           {exercises && (
             <ReactPaginate className='flex items-center justify-center'
               breakLabel="..."
               nextLabel= {<IoCaretForwardCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               onPageChange={handlePageClick}
-              pageRangeDisplayed={5}
+              pageRangeDisplayed={1}
               pageCount={pageCount}
               previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               renderOnZeroPageCount={null}
-              pageClassName='text-sm font-medium py-2 px-4 mx-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 cursor-pointer'
+              pageClassName='text-xs md:text-sm font-medium py-1 md:py-2 px-2 md:px-4 mx-1 bg-gray-200 text-gray-700  rounded-md hover:bg-gray-300 cursor-pointer'
+              activeClassName='bg-red-200 hover:bg-red-300'
             />
           )}
         </div>
