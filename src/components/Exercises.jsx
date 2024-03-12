@@ -64,7 +64,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
               pageCount={pageCount}
               previousLabel= {<IoCaretBackCircleOutline size={25} className='text-gray-500 hover:text-gray-600' />}
               renderOnZeroPageCount={null}
-              pageClassName='text-xs md:text-sm font-medium py-1 md:py-2 px-2 md:px-4 mx-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 cursor-pointer'
+              pageClassName='text-xs md:text-sm font-medium py-1 md:py-2 px-2 md:px-4 mx-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 shadow-md shadow-gray-400 cursor-pointer'
               activeClassName='bg-red-200 hover:bg-red-300'
             />
           )}
