@@ -27,6 +27,8 @@
 
 Fitness Monster - Modern UI/UX website, developed using React.js, Tailwind CSS and ExerciseDB API, exemplifies modern UI/UX principles. Its sleek design, seamless functionality, and overall user experience set a high standard, serving as a reference for future modern applications or websites in general.
 
+Here you can get guidance of exercises, you want to know about. Just search with exercise name, bodypart or equipment and you will get your exercise companion related to your keyword to guide you.
+
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Vite
