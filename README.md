@@ -25,7 +25,7 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-This is Shubham Tiwari's Portfolio Website.
+Fitness Monster - Modern UI/UX website, developed using React.js, Tailwind CSS and ExerciseDB API, exemplifies modern UI/UX principles. Its sleek design, seamless functionality, and overall user experience set a high standard, serving as a reference for future modern applications or websites in general.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
