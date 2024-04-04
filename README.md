@@ -34,7 +34,7 @@ Here you can get guidance of exercises, you want to know about. Just search with
 - Vite
 - React.Js
 - Tailwind CSS
-- Exercise DB API 
+- ExerciseDB API 
 
 ## <a name="features">🔋 Features</a>
 
