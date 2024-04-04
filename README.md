@@ -38,13 +38,13 @@ Here you can get guidance of exercises, you want to know about. Just search with
 
 ## <a name="features">🔋 Features</a>
 
-👉 **Beautiful Sections**: Includes home, about, portfolio, experience, and contact.
+👉 **Beautiful Sections**: Includes home, exercise results, exercise details, and footer.
 
-👉 **UI Geometry**: Utilizes tailwindcss for intricate shapes like circular feature, grid lines, and side lines.
+👉 **UI Geometry**: Utilizes tailwindcss for intricate shapes like cards, grid lines, and side lines.
 
-👉 **Latest UI Trends**: Incorporates modern design elements such as smooth scrolling.
+👉 **Latest UI Trends**: Incorporates modern design elements such as smooth scrolling and horizontal scrolling.
 
-👉 **Cool Gradients**: Enhances visuals with stylish gradients using Tailwind CSS for grids, buttons, etc.
+👉 **Cool Gradients**: Enhances visuals with stylish gradients using Tailwind CSS for background, buttons, etc.
 
 👉 **Responsive**: Ensures seamless functionality and aesthetics across all devices
 
