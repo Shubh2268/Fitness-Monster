@@ -32,8 +32,9 @@ Here you can get guidance of exercises, you want to know about. Just search with
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Vite
-- React.js
+- React.Js
 - Tailwind CSS
+- Exercise DB API 
 
 ## <a name="features">🔋 Features</a>
 
