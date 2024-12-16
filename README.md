@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://fitness-monster.netlify.app" target="_blank">
-      <img src="https://imagetolink.com/ib/1m1VCo3Lgr.png" alt="FM Banner">
+      <img src="https://tools.corenexis.com/image/cnxm/Q24/12/be04fbf86b.webp" alt="FM Banner">
     </a>
   <br />
 
